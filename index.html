@@ -1,0 +1,107 @@
+<!DOCTYPE HMTL>
+<html lang="en" dir="ltr">
+
+
+<head>
+  <title>Konversi Suhu</title>
+  <script type="text/javascript" src="latjs1.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konversi Suhu</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+            <div class="panel panel-default col-sm-6">
+                <div class="panel-heading">
+                    Konversi Suhu Celsius ke Reamur
+                </div>
+
+                <div class="panel-body">
+                    <form name="celc">
+                        <div class="form-group">
+                            <label>Masukan Derajat Celcius</label>
+                            <input class="form-control" name="val1" placeholder="Celcius" />
+                        </div>
+                        <input type="button" name="ll" onclick="cel()" class="btn btn-info btn"
+                            value="Konversikan"><br><br>
+                        <div id="hsl" class="alert alert-info">
+                            Hasilnya Konversi :
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="panel panel-default col-sm-6">
+                <div class="panel-heading">
+                    Konversi Suhu Celcius ke Farenheit
+                </div>
+
+                <div class="panel-body">
+                    <form name="fare">
+                        <div class="form-group">
+                            <label>Masukan Derajat Celcius</label>
+                            <input class="form-control" name="val2" placeholder="Celcius" />
+                        </div>
+                        <input type="button" onclick="far()" class="btn btn-info btn" value="Konversikan"><br><br>
+                        <div id="hslFar" class="alert alert-info">
+                            Hasilnya Konversi :
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="panel panel-default col-sm-6">
+                <div class="panel-heading">
+                    Konversi Suhu Celcius ke Kelvin
+                </div>
+
+                <div class="panel-body">
+                    <form name="kelv">
+                        <div class="form-group">
+                            <label>Masukan Derajat Celcius</label>
+                            <input class="form-control" name="val2" placeholder="Celcius" />
+                        </div>
+                        <input type="button" onclick="kel()" class="btn btn-info btn" value="Konversikan"><br><br>
+                        <div id="hslKel" class="alert alert-info">
+                            Hasilnya Konversi :
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        <script type="text/javascript">
+            function cel() {
+                var x = celc.val1.value
+                y = (x / 100) * 80;
+                document.getElementById("hsl").innerHTML = "Hasilnya : " + y + " Reamur";
+                document.getElementById("persen").style.width = x + "%";
+            }
+            function kel() {
+
+                x = eval(kelv.val2.value);
+                k = x + 273;
+
+                document.getElementById("hslKel").innerHTML = "Hasilnya : " + k + " Kelvin";
+                document.getElementById("persenK").style.width = x + "%";
+            }
+            function far() {
+                x = eval(fare.val2.value);
+                k = (9 / 5 * x) + 32;
+                document.getElementById("hslFar").innerHTML = "Hasilnya : " + k + " Farenheit";
+                document.getElementById("persenF").style.width = x + "%";
+            }
+        </script>
+
+        <div class="col-12 footer">
+            <strong> &copy; Copyright by Natasya Adelia </strong>
+            </div>
+        </div>
+
+    </div>
+    </body>
+    </html>
+  </script>
